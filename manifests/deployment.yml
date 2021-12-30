@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sreyathalipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sreyathalipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sreyathalipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sreyathalipipelinesjavascriptdocker 
+          image: mycontainerregistry800.azurecr.io/sreyathalipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
